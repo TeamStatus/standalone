@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: ts bi
+# Summary: Installs new bundles from Gemfile
+# Help: This command is used to install new packages from Gemfile
+set -e
+bundle install
