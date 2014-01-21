@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Usage: btf status
+# Summary: Show status of services
+# Help: This command is used to show status of all TeamStatus.TV services
+
+for p in supervisorctl; do
+	command -v "$p" > /dev/null || (echo "Command $p is missing; please install it and try again"; exit 1)
+done
+
+cd ${_BTF_ROOT}
+
+supervisorctl -c etc/supervisord.conf status

@@ -20,7 +20,7 @@ abs_dirname() {
 }
 
 libexec_path="$(abs_dirname "$0")"
-export _TS_ROOT="$(abs_dirname "$libexec_path")"
+export _BTF_ROOT="$(abs_dirname "$libexec_path")"
 export PATH="${libexec_path}:$PATH"
 
 command="$1"

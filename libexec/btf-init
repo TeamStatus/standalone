@@ -48,14 +48,14 @@ if [ -z "$print" ]; then
   { echo "# Load btf automatically by adding"
     echo "# the following to ${profile}:"
     echo
-    echo "eval \"\$(${_TS_ROOT}/bin/btf init -)\""
+    echo "eval \"\$(${_BTF_ROOT}/bin/btf init -)\""
     echo
   } >&2
 
   exit 1
 fi
 
-echo "export PATH=\"\${PATH}:${_TS_ROOT}/bin\""
+echo "export PATH=\"\${PATH}:${_BTF_ROOT}/bin\""
 
 case "$shell" in
 bash | zsh )
