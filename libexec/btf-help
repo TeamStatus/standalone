@@ -7,7 +7,7 @@ print_summaries() {
   local longest_command=0
   local command
 
-  for command in $(ts-commands); do
+  for command in $(btf-commands); do
     local file="$(command_path "$command")"
     if [ ! -h "$file" ]; then
       local summary="$(summary "$file")"
@@ -47,7 +47,7 @@ print_help() {
 }
 
 command_path() {
-  command -v "ts-$command" || command -v "ts-sh-$command" || true
+  command -v "btf-$command" || command -v "btf-sh-$command" || true
 }
 
 summary() {
@@ -74,20 +74,20 @@ truncate() {
   fi
 }
 
-# Provide ts completions
+# Provide btf completions
 if [ "$1" = "--complete" ]; then
-  exec "ts-commands"
+  exec "btf-commands"
   exit
 fi
 
 command="$1"
 case "$command" in
-"") echo "Usage: ts <command> [<args>]
+"") echo "Usage: btf <command> [<args>]
 
-Some useful ts commands are:
+Some useful btf commands are:
 $(print_summaries)
 
-See 'ts help <command>' for information on a specific command."
+See 'btf help <command>' for information on a specific command."
 ;;
 *)
   file="$(command_path "$command")"
@@ -95,7 +95,7 @@ See 'ts help <command>' for information on a specific command."
   if [ -n "$file" ]; then
     print_help "$file"
   else
-    echo "ts: no such command \`$command'" >&2
+    echo "btf: no such command \`$command'" >&2
     exit 1
   fi
 esac

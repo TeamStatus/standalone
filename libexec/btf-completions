@@ -3,12 +3,12 @@ set -e
 
 COMMAND="$1"
 if [ -z "$COMMAND" ]; then
-  echo "usage: ts completions COMMAND [arg1 arg2...]" >&2
+  echo "usage: btf completions COMMAND [arg1 arg2...]" >&2
   exit 1
 fi
 
-COMMAND_PATH="$(command -v "ts-$COMMAND")"
-if grep -i "^# provide ts completions" "$COMMAND_PATH" >/dev/null; then
+COMMAND_PATH="$(command -v "btf-$COMMAND")"
+if grep -i "^# provide btf completions" "$COMMAND_PATH" >/dev/null; then
   shift
   exec "$COMMAND_PATH" --complete "$@"
 fi

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Usage: ts commands
-# Summary: List all ts commands
-# Help: This command is mostly used for autocompletion in various shells, and for `ts help`.
+# Usage: btf commands
+# Summary: List all btf commands
+# Help: This command is mostly used for autocompletion in various shells, and for `btf help`.
 # Also, this command helps find commands that are named the same as potentially builtin shell commands (which, cd, etc)
 
 set -e
 
-# Provide ts completions
+# Provide btf completions
 if [ "$1" = "--complete" ]; then
   echo --sh
   echo --no-sh
@@ -24,8 +24,8 @@ fi
 shopt -s nullglob
 
 { for path in ${PATH//:/$'\n'}; do
-    for command in "${path}/ts-"*; do
-      command="${command##*ts-}"
+    for command in "${path}/btf-"*; do
+      command="${command##*btf-}"
       if [ -n "$sh" ]; then
         if [ ${command:0:3} = "sh-" ]; then
           echo ${command##sh-}
