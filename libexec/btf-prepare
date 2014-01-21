@@ -6,7 +6,7 @@ set -e
 
 cd ${_TS_ROOT}/lib
 cd console
-bundle install
+bundle install --deployment --without test,development
 cd -
 
 cd boards
