@@ -9,4 +9,8 @@ done
 
 cd ${_BTF_ROOT}
 
-supervisord -c etc/supervisord.conf
+if [ $# -eq 0 ] ; then
+	supervisord -c etc/supervisord.conf
+else
+	supervisorctl -c etc/supervisord.conf start $@
+fi

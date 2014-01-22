@@ -9,4 +9,8 @@ done
 
 cd ${_BTF_ROOT}
 
-supervisorctl -c etc/supervisord.conf shutdown
+if [ $# -eq 0 ] ; then
+	supervisorctl -c etc/supervisord.conf shutdown
+else
+	supervisorctl -c etc/supervisord.conf stop $@
+fi
