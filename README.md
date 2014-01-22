@@ -16,6 +16,7 @@ You need to have installed following tools to run TeamStatus.TV
 * mongodb server
 * supervisord
 * nginx
+* envdir (from daemontools or python version http://envdir.readthedocs.org/)
 
 Instructions bellow reference `btf` command which is available in `bin` directory.
 
@@ -23,13 +24,17 @@ Instructions bellow reference `btf` command which is available in `bin` director
 
 The easiest option is to install [Homebrew package manager](http://brew.sh), then use brew to install missing packages.
 
-To install supervisord use: `pip install supervisord`
+To install supervisord use: `sudo pip install supervisord`
+
+To install envdir use: `sudo pip install envdir`
 
 ## Installing on Ubuntu
 
 You should be able to install everything using `apt-get`
 
 To install supervisord use: `pip install supervisord`
+
+To install envdir use: `sudo pip install envdir`
 
 ## Installing on Windows
 
@@ -46,6 +51,28 @@ To install dependencies run: `btf prepare`
 Configuration is stored in `etc` directory, you should edit and customize `teamstatus.conf` file.
 
 If you wish to change base url of the application you should also edit `etc/nginx/nginx.conf`
+
+## Options
+
+Changing any of these values requires btf restart
+
+*	BOARDS_URL and CONSOLE_URL
+	> Change them in case you decide to use a different hostname or path
+
+* MONGODB_URL
+	> Database URL
+
+* ENCRYPTED_FIELDS_SALT and ENCRYPTED_FIELDS_PASSWORD
+	> Password and salt used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your.database useless
+
+* COOKIE_SECRET
+	> For security reasons you should change this to some random value
+
+* CONSOLE_SECRET
+	> For security reasons you should change this to some randome value
+
+* COOKIE_DOMAIN, COOKIE_NAME, STANDALONE, RAILS_ENV, NODE_ENV
+	> Internal, not to touch
 
 # To run TeamStatus.TV
 
