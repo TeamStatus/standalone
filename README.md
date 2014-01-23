@@ -58,6 +58,16 @@ Configuration is stored in `etc` directory, you should edit and customize `teams
 
 If you wish to change base url of the application you should also edit `etc/nginx/nginx.conf`
 
+## MongoDB
+
+On some systems MongoDB doesn't require authentication - so whatever you store in the database will be visible by anyone. TeamStatus.TV encrypts crucial fields (like password) but you probably want to secure the database itself too.
+
+In case you want to secure the database here's how to do it:
+
+* run `mongo` console and use `db.addUser(username, password)` to create a user
+* edit `/etc/mongodb.conf` and add `auth = true`
+* reload MongoDB
+
 ## Options
 
 Changing any of these values requires btf restart
