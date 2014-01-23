@@ -10,9 +10,11 @@ If you have any problems or questions feel free to contact pawel@teamstatus.tv f
 
 You need to have installed following tools to run TeamStatus.TV
 
+* git
 * node (1.10.x)
 * npm
 * ruby 2.0
+* bundler
 * mongodb server
 * supervisord
 * nginx
@@ -30,11 +32,15 @@ To install envdir use: `sudo pip install envdir`
 
 ## Installing on Ubuntu
 
+If you are using Ubuntu 12.x LTS which is missing ruby 2.0, please follow [this tutorial][http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html]
+
 You should be able to install everything using `apt-get`
 
 To install supervisord use: `pip install supervisord`
 
 To install envdir use: `sudo pip install envdir`
+
+To install bundler use: `sudo gem install bundler` (if you use rbenv leave out `sudo`)
 
 ## Installing on Windows
 

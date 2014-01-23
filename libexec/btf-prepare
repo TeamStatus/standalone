@@ -4,6 +4,10 @@
 # Help: You need to run this command to refresh dependencies
 set -e
 
+for p in bundle npm; do
+        command -v "$p" > /dev/null || (echo "Command $p is missing; please install it and try again"; exit 1)
+done
+
 cd ${_BTF_ROOT}/lib
 cd console
 bundle install --deployment --without test,development
