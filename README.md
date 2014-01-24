@@ -26,21 +26,53 @@ Instructions bellow reference `btf` command which is available in `bin` director
 
 The easiest option is to install [Homebrew package manager](http://brew.sh), then use brew to install missing packages.
 
-To install supervisord use: `sudo pip install supervisord`
+`brew install mongodb`
 
-To install envdir use: `sudo pip install envdir`
+`sudo pip install supervisor envdir`
+
+`sudo gem install bundler foreman`
 
 ## Installing on Ubuntu
 
-If you are using Ubuntu 12.x LTS which is missing ruby 2.0, please follow [this tutorial](http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html). You will also need to [install the latest node version](https://www.digitalocean.com/community/articles/how-to-install-an-upstream-version-of-node-js-on-ubuntu-12-04).
-
 You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`
 
-To install supervisord use: `sudo pip install supervisord`
+`sudo apt-get install mongodb nginx python-pip` 
 
-To install envdir use: `sudo pip install envdir`
+`sudo pip install supervisor`
 
-To install bundler use: `sudo gem install bundler` (if you use rbenv leave out `sudo`)
+`sudo pip install envdir`
+
+`sudo gem install bundler foreman`
+
+### Preparing Ubuntu 12.x LTS
+
+Installing missing ruby 2.0
+
+`sudo add-apt-repository ppa:brightbox/ruby-ng-experimental`
+
+`sudo apt-get update`
+
+`sudo apt-get install -y ruby2.0 ruby2.0-dev ruby2.0-doc`
+
+Installing the latest Node.JS
+
+`sudo apt-get install python-software-properties`
+ 
+`sudo apt-add-repository ppa:chris-lea/node.js`
+ 
+`sudo apt-get update`
+ 
+`sudo apt-get install nodejs`
+
+Installing the latest MongoDB
+
+`sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10`
+
+`echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list`
+
+`sudo apt-get update`
+
+`sudo apt-get install mongodb-10gen`
 
 ## Installing on Windows
 
@@ -70,24 +102,30 @@ In case you want to secure the database here's how to do it:
 
 ## Options
 
-Changing any of these values requires btf restart
+Changing any of these values requires `btf restart`
 
 *	BOARDS_URL and CONSOLE_URL
+
 	> Change them in case you decide to use a different hostname or path
 
 * MONGODB_URL
+
 	> Database URL
 
 * ENCRYPTED_FIELDS_SALT and ENCRYPTED_FIELDS_PASSWORD
+
 	> Password and salt used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your.database useless
 
 * COOKIE_SECRET
+
 	> For security reasons you should change this to some random value
 
 * CONSOLE_SECRET
+
 	> For security reasons you should change this to some randome value
 
 * COOKIE_DOMAIN, COOKIE_NAME, STANDALONE, RAILS_ENV, NODE_ENV
+
 	> Internal, not to touch
 
 # To run TeamStatus.TV
