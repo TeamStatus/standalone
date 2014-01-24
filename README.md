@@ -32,8 +32,6 @@ To install envdir use: `sudo pip install envdir`
 
 ## Installing on Ubuntu
 
-If you are using Ubuntu 12.x LTS which is missing ruby 2.0, please follow [this tutorial](http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html). You will also need to [install the latest node version](https://www.digitalocean.com/community/articles/how-to-install-an-upstream-version-of-node-js-on-ubuntu-12-04).
-
 You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`
 
 To install supervisord use: `sudo pip install supervisord`
@@ -41,6 +39,20 @@ To install supervisord use: `sudo pip install supervisord`
 To install envdir use: `sudo pip install envdir`
 
 To install bundler use: `sudo gem install bundler` (if you use rbenv leave out `sudo`)
+
+### Preparing If Ubuntu 12.x LTS
+
+Installing missing ruby 2.0, please follow [this tutorial](http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html).
+
+Installing the latest Node.JS
+
+`sudo apt-get install python-software-properties`
+ 
+`sudo apt-add-repository ppa:chris-lea/node.js`
+ 
+`sudo apt-get update`
+ 
+`sudo apt-get install nodejs`
 
 ## Installing on Windows
 
