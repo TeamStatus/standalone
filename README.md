@@ -92,7 +92,7 @@ Changing any of these values requires btf restart
 
 # To run TeamStatus.TV
 
-**Do not run TeamStatus.TV before editing `teamstatus.conf`**
+**Do not run TeamStatus.TV before editing configuration in `teamstatus.d`**
 
 Run: `btf start`
 
