@@ -42,7 +42,13 @@ To install bundler use: `sudo gem install bundler` (if you use rbenv leave out `
 
 ### Preparing If Ubuntu 12.x LTS
 
-Installing missing ruby 2.0, please follow [this tutorial](http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html).
+Installing missing ruby 2.0
+
+`sudo add-apt-repository ppa:brightbox/ruby-ng-experimental`
+
+`sudo apt-get update`
+
+`sudo apt-get install -y ruby2.0 ruby2.0-dev ruby2.0-doc`
 
 Installing the latest Node.JS
 
