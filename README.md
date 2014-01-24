@@ -32,7 +32,7 @@ To install envdir use: `sudo pip install envdir`
 
 ## Installing on Ubuntu
 
-If you are using Ubuntu 12.x LTS which is missing ruby 2.0, please follow [this tutorial][http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html]
+If you are using Ubuntu 12.x LTS which is missing ruby 2.0, please follow [this tutorial][http://timwise.blogspot.com/2013/05/installing-ruby-2-rails-4-on-ubuntu.html]. You will also need to [install the latest node version](https://www.digitalocean.com/community/articles/how-to-install-an-upstream-version-of-node-js-on-ubuntu-12-04).
 
 You should be able to install everything using `apt-get`
 
