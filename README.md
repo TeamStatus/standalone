@@ -54,7 +54,7 @@ To install dependencies run: `btf prepare`
 
 # Configuration
 
-Configuration is stored in `etc` directory, you should edit and customize `teamstatus.conf` file.
+Configuration is stored in `etc` directory, TeamStatus.TV specific options are stored in `teamstatus.d`, each option as a separate file.
 
 If you wish to change base url of the application you should also edit `etc/nginx/nginx.conf`
 
