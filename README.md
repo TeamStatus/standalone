@@ -30,6 +30,8 @@ The easiest option is to install [Homebrew package manager](http://brew.sh), the
 
 `sudo pip install supervisor envdir`
 
+`sudo gem install bundler foreman`
+
 ## Installing on Ubuntu
 
 You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`
@@ -40,7 +42,7 @@ You should be able to install everything else (mongodb, nginx, etc.) using `apt-
 
 `sudo pip install envdir`
 
-`sudo gem install bundler`
+`sudo gem install bundler foreman`
 
 ### Preparing Ubuntu 12.x LTS
 
