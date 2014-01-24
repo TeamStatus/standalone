@@ -88,7 +88,7 @@ In case you want to secure the database here's how to do it:
 
 ## Options
 
-Changing any of these values requires btf restart
+Changing any of these values requires `btf restart`
 
 *	BOARDS_URL and CONSOLE_URL
 
