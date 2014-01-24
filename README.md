@@ -26,19 +26,21 @@ Instructions bellow reference `btf` command which is available in `bin` director
 
 The easiest option is to install [Homebrew package manager](http://brew.sh), then use brew to install missing packages.
 
-To install supervisord use: `sudo pip install supervisord`
+`brew install mongodb`
 
-To install envdir use: `sudo pip install envdir`
+`sudo pip install supervisor envdir`
 
 ## Installing on Ubuntu
 
 You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`
 
-To install supervisord use: `sudo pip install supervisord`
+`sudo apt-get install mongodb nginx python-pip` 
 
-To install envdir use: `sudo pip install envdir`
+`sudo pip install supervisor`
 
-To install bundler use: `sudo gem install bundler` (if you use rbenv leave out `sudo`)
+`sudo pip install envdir`
+
+`sudo gem install bundler`
 
 ### Preparing Ubuntu 12.x LTS
 
@@ -59,6 +61,16 @@ Installing the latest Node.JS
 `sudo apt-get update`
  
 `sudo apt-get install nodejs`
+
+Installing the latest MongoDB
+
+`sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10`
+
+`echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list`
+
+`sudo apt-get update`
+
+`sudo apt-get install mongodb-10gen`
 
 ## Installing on Windows
 
