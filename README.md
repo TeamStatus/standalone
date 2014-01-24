@@ -74,6 +74,14 @@ Installing the latest MongoDB
 
 `sudo apt-get install mongodb-10gen`
 
+Installing the latest nginx
+
+`sudo add-apt-repository ppa:chris-lea/nginx-devel`
+
+`sudo apt-get update`
+
+`sudo apt-get install nginx`
+
 ## Installing on Windows
 
 That's not supported. Sorry. We'll be happy to update this section if you wish to contribute a Windows specific instructions.
@@ -96,8 +104,10 @@ On some systems MongoDB doesn't require authentication - so whatever you store i
 
 In case you want to secure the database here's how to do it:
 
-* run `mongo` console and use `db.addUser(username, password)` to create a user
-* edit `/etc/mongodb.conf` and add `auth = true`
+* run `mongo` console
+* `use teamstatus` (to create the database)
+* `db.addUser({user: 'username', pwd: 'password', roles: ['readWrite']})`
+* edit `/etc/mongodb.conf` and add `auth = true` (to enable authentication)
 * reload MongoDB
 
 ## Options
