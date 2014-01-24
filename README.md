@@ -40,7 +40,7 @@ To install envdir use: `sudo pip install envdir`
 
 To install bundler use: `sudo gem install bundler` (if you use rbenv leave out `sudo`)
 
-### Preparing If Ubuntu 12.x LTS
+### Preparing Ubuntu 12.x LTS
 
 Installing missing ruby 2.0
 
