@@ -10,7 +10,7 @@ done
 cd ${_BTF_ROOT}
 
 if [ $# -eq 0 ] ; then
-	supervisord -c etc/supervisord.conf
+	supervisord -c libexec/supervisord/supervisord.conf
 else
-	supervisorctl -c etc/supervisord.conf start $@
+	supervisorctl -c libexec/supervisord/supervisord.conf start $@
 fi

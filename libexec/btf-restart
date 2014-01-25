@@ -9,4 +9,4 @@ done
 
 cd ${_BTF_ROOT}
 
-supervisorctl -c etc/supervisord.conf restart $@
+supervisorctl -c libexec/supervisord/supervisord.conf restart $@
