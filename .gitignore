@@ -1,4 +1,6 @@
 etc/
 lib/
+libexec/console/
+libexec/boards/
 logs/*.log
 tmp/

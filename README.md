@@ -36,7 +36,7 @@ The easiest option is to install [Homebrew package manager](http://brew.sh), the
 
 You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`
 
-`sudo apt-get install mongodb nginx python-pip` 
+`sudo apt-get install mongodb nginx python-pip`
 
 `sudo pip install supervisor`
 
@@ -57,11 +57,11 @@ Installing missing ruby 2.0
 Installing the latest Node.JS
 
 `sudo apt-get install python-software-properties`
- 
+
 `sudo apt-add-repository ppa:chris-lea/node.js`
- 
+
 `sudo apt-get update`
- 
+
 `sudo apt-get install nodejs`
 
 Installing the latest MongoDB
@@ -88,19 +88,21 @@ That's not supported. Sorry. We'll be happy to update this section if you wish t
 
 ## Prepare TeamStatus.TV
 
-You need to download missing dependencies that are not distributed with TeamStatus.TV, it's only needed once after installation (also after update).
+You need to download missing dependencies that are not distributed with TeamStatus.TV, it's only needed once after installation (also after each update).
 
 To install dependencies run: `btf prepare`
 
 # Configuration
 
-Configuration is stored in `etc` directory, TeamStatus.TV specific options are stored in `teamstatus.d`, each option as a separate file.
+Example configuration is stored in `etc.sample` directory, copy it to `etc` and customize.
+
+Main TeamStatus.TV specific settings are stored in `etc/teamstatus.d`, each setting as a separate file.
 
 If you wish to change base url of the application you should also edit `etc/nginx/nginx.conf`
 
 ## MongoDB
 
-On some systems MongoDB doesn't require authentication - so whatever you store in the database will be visible by anyone. TeamStatus.TV encrypts crucial fields (like password) but you probably want to secure the database itself too.
+On some systems MongoDB doesn't require authentication - so whatever you store in the database will be visible by anyone. TeamStatus.TV encrypts crucial fields (like password) so your data is safe but you probably want to secure the database itself too.
 
 In case you want to secure the database here's how to do it:
 
@@ -122,9 +124,13 @@ Changing any of these values requires `btf restart`
 
 	> Database URL
 
-* ENCRYPTED_FIELDS_SALT and ENCRYPTED_FIELDS_PASSWORD
+* ENCRYPTED_FIELDS_SALT
 
-	> Password and salt used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your.database useless
+> Salt used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your database useless. *Must be exactly 8 characters long*
+
+* ENCRYPTED_FIELDS_PASSWORD
+
+	> Password used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your database useless.
 
 * COOKIE_SECRET
 
@@ -140,7 +146,7 @@ Changing any of these values requires `btf restart`
 
 # To run TeamStatus.TV
 
-**Do not run TeamStatus.TV before editing configuration in `teamstatus.d`**
+**Do not run TeamStatus.TV before editing configuration in `etc/teamstatus.d`**
 
 Run: `btf start`
 
