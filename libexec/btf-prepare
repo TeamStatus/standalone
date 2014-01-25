@@ -10,7 +10,7 @@ done
 
 cd ${_BTF_ROOT}/libexec
 cd console
-bundle install --deployment --without test,development
+bundle install --deployment --without test,development,doc
 cd -
 
 cd boards
