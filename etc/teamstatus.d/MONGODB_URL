@@ -1,1 +1,1 @@
-mongodb://localhost/teamstatus
+mongodb://username:password@localhost/teamstatus
