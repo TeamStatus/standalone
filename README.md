@@ -124,10 +124,6 @@ Changing any of these values requires `btf restart`
 
 	> Database URL
 
-* ENCRYPTED_FIELDS_SALT
-
-> Salt used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your database useless. *Must be exactly 8 characters long*
-
 * ENCRYPTED_FIELDS_PASSWORD
 
 	> Password used to encrypt sensitive fields in the database. Must not change after database was initialized. Losing this values will render your database useless.
