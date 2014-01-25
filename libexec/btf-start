@@ -9,6 +9,11 @@ done
 
 cd ${_BTF_ROOT}
 
+if [ ! -d ${_BTF_ROOT}/libexec/boards/node_modules ] ; then
+	echo "Please run \"btf prepare\" first"
+	exit 1
+fi
+
 if [ $# -eq 0 ] ; then
 	supervisord -c libexec/supervisord/supervisord.conf
 else
