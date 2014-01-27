@@ -4,7 +4,7 @@
 # Help: This command is used to start all services
 
 for p in foreman nginx supervisord; do
-	command -v "$p" > /dev/null || (echo "Command $p is missing; please install it and try again"; exit 1)
+	command -v "$p" > /dev/null || { echo "Command $p is missing; please install it and try again"; exit 1; }
 done
 
 cd ${_BTF_ROOT}
