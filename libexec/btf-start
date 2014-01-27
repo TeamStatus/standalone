@@ -16,6 +16,9 @@ fi
 
 if [ $# -eq 0 ] ; then
 	supervisord -c libexec/supervisord/supervisord.conf
+	echo "Running TeamStatus.TV, use \"btf status\" to monitor it"
+	echo ""
+	echo "Open http://localhost:57575 to continue"
 else
 	supervisorctl -c libexec/supervisord/supervisord.conf start $@
 fi
