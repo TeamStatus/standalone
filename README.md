@@ -1,6 +1,8 @@
 # TeamStatus.TV BTF
 
-Welcome, I'm really happy that you're evaluating our product. Here's a short and hopefully easy to follow installation instruction.
+Welcome, I'm really happy that you're evaluating our product. 
+
+You are just few steps from beautiful dasboard for your project. Simply follow these short and easy installation instruction.
 
 If you have any problems or questions feel free to contact pawel@teamstatus.tv for support.
 
@@ -11,7 +13,7 @@ If you have any problems or questions feel free to contact pawel@teamstatus.tv f
 You need to have installed following tools to run TeamStatus.TV
 
 * git
-* node (1.10.x)
+* node (0.10.x)
 * npm
 * ruby 2.0
 * bundler
@@ -151,3 +153,7 @@ To stop it: `btf stop`
 To restart it: `btf restart`
 
 To get current status: `btf status`
+
+# Use it
+
+Open http://localhost:57575/ in your favourite browser and set up a board for your team!
