@@ -1,26 +1,12 @@
 # TeamStatus.TV BTF
 
-Welcome, I'm really happy that you're evaluating our product. 
+Welcome, I'm really happy that you're evaluating our product.
 
 You are just few steps from beautiful dasboard for your project. Simply follow these short and easy installation instruction.
 
 If you have any problems or questions feel free to contact pawel@teamstatus.tv for support.
 
 # Installation
-
-## Dependencies
-
-You need to have installed following tools to run TeamStatus.TV
-
-* git
-* node (0.10.x)
-* npm
-* ruby 2.0
-* bundler
-* mongodb server
-* supervisord
-* nginx
-* envdir (from daemontools or python version http://envdir.readthedocs.org/)
 
 Instructions bellow reference `btf` command which is available in `bin` directory.
 
@@ -36,7 +22,7 @@ The easiest option is to install [Homebrew package manager](http://brew.sh), the
 
 ## Installing on Ubuntu
 
-You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`
+You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`. If you're using Ubuntu 12.x LTS see instructions in the section bellow.
 
 `sudo apt-get install mongodb nginx python-pip`
 
@@ -83,6 +69,20 @@ Installing the latest nginx
 `sudo apt-get update`
 
 `sudo apt-get install nginx`
+
+## Installing on other Linux distros
+
+You need to have installed following tools to run TeamStatus.TV, check Ubuntu instructions for details, some commands you may re-use.
+
+* git
+* node (0.10.x)
+* npm
+* ruby 2.0
+* bundler
+* mongodb server
+* supervisord
+* nginx (>1.5.0)
+* envdir (from daemontools or python version http://envdir.readthedocs.org/)
 
 ## Installing on Windows
 
