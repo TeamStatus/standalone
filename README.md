@@ -20,9 +20,13 @@ The easiest option is to install [Homebrew package manager](http://brew.sh), the
 
 `sudo gem install bundler foreman`
 
-## Installing on Ubuntu
+### Installing on Ubuntu 12.x LTS
 
-You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`. If you're using Ubuntu 12.x LTS see instructions in the section bellow.
+Run `bin/btf install-deps` to install missing dependencies.
+
+## Installing on Ubuntu 13.x
+
+You should be able to install everything else (mongodb, nginx, etc.) using `apt-get`.
 
 `sudo apt-get install mongodb nginx python-pip`
 
@@ -31,44 +35,6 @@ You should be able to install everything else (mongodb, nginx, etc.) using `apt-
 `sudo pip install envdir`
 
 `sudo gem install bundler foreman`
-
-### Preparing Ubuntu 12.x LTS
-
-Installing missing ruby 2.0
-
-`sudo add-apt-repository ppa:brightbox/ruby-ng-experimental`
-
-`sudo apt-get update`
-
-`sudo apt-get install -y ruby2.0 ruby2.0-dev ruby2.0-doc`
-
-Installing the latest Node.JS
-
-`sudo apt-get install python-software-properties`
-
-`sudo apt-add-repository ppa:chris-lea/node.js`
-
-`sudo apt-get update`
-
-`sudo apt-get install nodejs`
-
-Installing the latest MongoDB
-
-`sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10`
-
-`echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list`
-
-`sudo apt-get update`
-
-`sudo apt-get install mongodb-10gen`
-
-Installing the latest nginx
-
-`sudo add-apt-repository ppa:chris-lea/nginx-devel`
-
-`sudo apt-get update`
-
-`sudo apt-get install nginx`
 
 ## Installing on other Linux distros
 
