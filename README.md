@@ -84,10 +84,6 @@ In case you want to secure the database here's how to do it:
 
 Changing any of these values requires `btf restart`
 
-*	BOARDS_URL and CONSOLE_URL
-
-	> Change them in case you decide to use a different hostname or path
-
 * MONGODB_URL
 
 	> Database URL
@@ -104,7 +100,7 @@ Changing any of these values requires `btf restart`
 
 	> For security reasons you should change this to some randome value
 
-* COOKIE_DOMAIN, COOKIE_NAME, STANDALONE, RAILS_ENV, NODE_ENV
+* COOKIE_DOMAIN, COOKIE_NAME, RAILS_ENV, NODE_ENV
 
 	> Internal, not to touch
 
